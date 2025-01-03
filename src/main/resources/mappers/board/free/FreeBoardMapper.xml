@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalapp.mapper.board.free.FreeBoardMapper">
+    <insert id="insertFreeBoard" parameterType="FreeBoardWriteDTO">
+        <selectKey resultType="long" keyProperty="freeBoardId" order="BEFORE">
+            SELECT SEQ_FREE_BOARD.nextval FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_FREE_BOARD (FREE_BOARD_ID, MEMBER_ID, TITLE, CONTENT)
+        VALUES (#{freeBoardId}, #{memberId}, #{title}, #{content})
+    </insert>
+
+    <select id="selectById" parameterType="long" resultType="FreeBoardDetailDTO">
+        SELECT FREE_BOARD_ID, MEMBER_ID, TITLE, CONTENT, VIEW_COUNT, REG_DATE, MOD_DATE
+        FROM TBL_FREE_BOARD
+        WHERE FREE_BOARD_ID = #{freeBoardId}
+    </select>
+</mapper>

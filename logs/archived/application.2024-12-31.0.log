@@ -1,0 +1,796 @@
+2024-12-31T11:52:31.991+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T11:52:31.992+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T11:52:32.023+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.5.0.24.07\6e07003d57be5e280ef0492209e20fa27edec5b6\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.5.0.24.07/6e07003d57be5e280ef0492209e20fa27edec5b6/oraclepki.jar
+2024-12-31T11:52:32.024+09:00  INFO 12256 --- [final-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-31T11:52:32.024+09:00  INFO 12256 --- [final-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-31T11:52:32.335+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T11:52:32.335+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T11:52:32.410+09:00 DEBUG 12256 --- [final-app] [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-12-31T11:52:32.411+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T11:52:32.650+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T11:52:32.666+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T11:52:32.667+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T11:52:32.696+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T11:52:32.697+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 673 ms
+2024-12-31T11:52:32.954+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T11:52:32.991+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T11:52:33.055+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T11:52:33.079+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T11:52:33.085+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 1.36 seconds (process running for 1.761)
+2024-12-31T11:52:39.652+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T11:52:39.653+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T11:52:39.654+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-31T11:52:39.758+09:00 ERROR 12256 --- [final-app] [http-nio-10000-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-10000-exec-1] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-31T11:52:39.762+09:00 ERROR 12256 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-31T11:52:47.259+09:00 ERROR 12256 --- [final-app] [http-nio-10000-exec-4] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-10000-exec-4] Exception processing template "index": Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-31T11:52:47.259+09:00 ERROR 12256 --- [final-app] [http-nio-10000-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [index], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1435) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1105) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-31T11:53:18.691+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-31T11:53:18.693+09:00  INFO 12256 --- [final-app] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T11:53:18.700+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T11:53:18.753+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T11:53:18.753+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T11:53:18.839+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T11:53:18.839+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T11:53:18.859+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T11:53:18.888+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T11:53:18.888+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T11:53:18.889+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T11:53:18.898+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T11:53:18.899+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 144 ms
+2024-12-31T11:53:18.950+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T11:53:18.956+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T11:53:18.971+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T11:53:18.978+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T11:53:18.980+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.247 seconds (process running for 47.656)
+2024-12-31T11:53:18.981+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T11:54:48.052+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 47 class path changes (12 additions, 12 deletions, 23 modifications)
+2024-12-31T11:54:48.053+09:00  INFO 12256 --- [final-app] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T11:54:48.056+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T11:54:48.102+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T11:54:48.102+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T11:54:48.180+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T11:54:48.180+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T11:54:48.203+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T11:54:48.232+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T11:54:48.233+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T11:54:48.233+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T11:54:48.241+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T11:54:48.241+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 137 ms
+2024-12-31T11:54:48.266+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T11:54:48.310+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T11:54:48.316+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T11:54:48.333+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T11:54:48.339+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T11:54:48.341+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.255 seconds (process running for 137.017)
+2024-12-31T11:54:48.342+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T11:54:51.823+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T11:54:51.824+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T11:54:51.824+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T12:36:26.494+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-31T12:36:26.495+09:00  INFO 12256 --- [final-app] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:36:26.499+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:36:26.541+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:36:26.541+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:36:26.621+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:36:26.621+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:36:26.647+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:36:26.679+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:36:26.680+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:36:26.680+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:36:26.689+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:36:26.689+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 146 ms
+2024-12-31T12:36:26.707+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:36:26.749+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:36:26.755+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:36:26.773+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:36:26.780+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:36:26.782+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.258 seconds (process running for 2635.458)
+2024-12-31T12:36:26.783+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:36:35.308+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-31T12:36:35.310+09:00  INFO 12256 --- [final-app] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:36:35.315+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:36:35.361+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:36:35.361+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:36:35.436+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:36:35.436+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:36:35.456+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:36:35.480+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:36:35.480+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:36:35.480+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:36:35.488+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:36:35.488+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 126 ms
+2024-12-31T12:36:35.501+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:36:35.532+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:36:35.540+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:36:35.552+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:36:35.557+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:36:35.559+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.212 seconds (process running for 2644.235)
+2024-12-31T12:36:35.560+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:38:32.025+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-12-31T12:38:32.025+09:00  INFO 12256 --- [final-app] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:38:32.030+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:38:32.077+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:38:32.078+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:38:32.162+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:38:32.162+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:38:32.181+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:38:32.204+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:38:32.205+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:38:32.205+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:38:32.213+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:38:32.213+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-12-31T12:38:32.225+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:38:32.259+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:38:32.267+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:38:32.280+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:38:32.286+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:38:32.288+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.226 seconds (process running for 2760.964)
+2024-12-31T12:38:32.288+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:38:33.705+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-31T12:38:33.706+09:00  INFO 12256 --- [final-app] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:38:33.709+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:38:33.755+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:38:33.755+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:38:33.841+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:38:33.841+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:38:33.864+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:38:33.889+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:38:33.889+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:38:33.890+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:38:33.899+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:38:33.899+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 143 ms
+2024-12-31T12:38:33.912+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:38:33.947+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:38:33.954+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:38:33.968+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:38:33.974+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:38:33.976+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.236 seconds (process running for 2762.652)
+2024-12-31T12:38:33.978+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:38:51.958+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T12:38:51.958+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T12:38:51.958+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T12:42:12.935+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-31T12:42:12.936+09:00  INFO 12256 --- [final-app] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:42:12.939+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:42:12.985+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:42:12.986+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:42:13.081+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:42:13.081+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:42:13.105+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:42:13.130+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:42:13.131+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:42:13.131+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:42:13.139+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:42:13.139+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 152 ms
+2024-12-31T12:42:13.154+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:42:13.190+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:42:13.196+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:42:13.206+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:42:13.213+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:42:13.215+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.244 seconds (process running for 2981.891)
+2024-12-31T12:42:13.216+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:43:41.458+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-31T12:43:41.459+09:00  INFO 12256 --- [final-app] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:43:41.463+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:43:41.506+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:43:41.506+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:43:41.588+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:43:41.588+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:43:41.608+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:43:41.632+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:43:41.633+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:43:41.633+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:43:41.641+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:43:41.641+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-12-31T12:43:41.658+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:43:41.701+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:43:41.706+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:43:41.721+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:43:41.727+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:43:41.729+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.237 seconds (process running for 3070.406)
+2024-12-31T12:43:41.730+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:44:29.422+09:00  INFO 12256 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-31T12:44:29.423+09:00  INFO 12256 --- [final-app] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:44:29.427+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:44:29.474+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 12256 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:44:29.474+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:44:29.557+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:44:29.557+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:44:29.578+09:00  WARN 12256 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:44:29.602+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:44:29.603+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:44:29.603+09:00  INFO 12256 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:44:29.611+09:00  INFO 12256 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:44:29.611+09:00  INFO 12256 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 136 ms
+2024-12-31T12:44:29.623+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:44:29.659+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:44:29.665+09:00 DEBUG 12256 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:44:29.678+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:44:29.684+09:00  INFO 12256 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:44:29.686+09:00  INFO 12256 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.225 seconds (process running for 3118.362)
+2024-12-31T12:44:29.686+09:00  INFO 12256 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:44:46.206+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T12:44:46.207+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T12:44:46.207+09:00  INFO 12256 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T12:45:04.712+09:00  INFO 12256 --- [final-app] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:45:04.715+09:00  INFO 12256 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:45:06.326+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:45:06.328+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:45:06.356+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc11\23.5.0.24.07\6e07003d57be5e280ef0492209e20fa27edec5b6\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc11/23.5.0.24.07/6e07003d57be5e280ef0492209e20fa27edec5b6/oraclepki.jar
+2024-12-31T12:45:06.357+09:00  INFO 10724 --- [final-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-31T12:45:06.357+09:00  INFO 10724 --- [final-app] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-31T12:45:06.692+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:45:06.692+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:45:06.776+09:00 DEBUG 10724 --- [final-app] [restartedMain] org.apache.ibatis.logging.LogFactory     : Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-12-31T12:45:06.778+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:45:07.007+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:45:07.015+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:45:07.015+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:45:07.042+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:45:07.042+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
+2024-12-31T12:45:07.102+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:45:07.288+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:45:07.323+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:45:07.380+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:45:07.399+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:45:07.405+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 1.337 seconds (process running for 1.766)
+2024-12-31T12:45:15.674+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T12:45:15.674+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T12:45:15.675+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T12:48:31.279+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-12-31T12:48:31.282+09:00  INFO 10724 --- [final-app] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:48:31.287+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:48:31.335+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:48:31.335+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:48:31.429+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:48:31.429+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:48:31.454+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:48:31.487+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:48:31.488+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:48:31.488+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:48:31.499+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:48:31.499+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 162 ms
+2024-12-31T12:48:31.519+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:48:31.557+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:48:31.564+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:48:31.579+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:48:31.586+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:48:31.588+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.27 seconds (process running for 205.949)
+2024-12-31T12:48:31.589+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:48:40.244+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T12:48:40.244+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T12:48:40.244+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T12:51:38.309+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T12:51:38.310+09:00  INFO 10724 --- [final-app] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:51:38.315+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:51:38.375+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:51:38.375+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:51:38.469+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:51:38.469+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:51:38.496+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:51:38.539+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:51:38.541+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:51:38.541+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:51:38.551+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:51:38.552+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 175 ms
+2024-12-31T12:51:38.572+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:51:38.624+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:51:38.631+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:51:38.649+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:51:38.656+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:51:38.658+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.303 seconds (process running for 393.018)
+2024-12-31T12:51:38.658+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T12:53:36.245+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T12:53:36.246+09:00  INFO 10724 --- [final-app] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T12:53:36.252+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T12:53:36.308+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T12:53:36.308+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T12:53:36.397+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T12:53:36.397+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T12:53:36.420+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T12:53:36.453+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T12:53:36.454+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T12:53:36.455+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T12:53:36.464+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T12:53:36.464+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 154 ms
+2024-12-31T12:53:36.481+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T12:53:36.521+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T12:53:36.527+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T12:53:36.543+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T12:53:36.550+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T12:53:36.552+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.262 seconds (process running for 510.912)
+2024-12-31T12:53:36.552+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:07:56.416+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:07:56.417+09:00  INFO 10724 --- [final-app] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:07:56.421+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:07:56.468+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:07:56.468+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:07:56.550+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:07:56.550+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:07:56.572+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:07:56.603+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:07:56.604+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:07:56.604+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:07:56.616+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:07:56.616+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 147 ms
+2024-12-31T13:07:56.634+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:07:56.682+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:07:56.688+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:07:56.708+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:07:56.716+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:07:56.718+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.266 seconds (process running for 1371.078)
+2024-12-31T13:07:56.719+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:10:07.588+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:10:07.589+09:00  INFO 10724 --- [final-app] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:10:07.594+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:10:07.634+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:10:07.634+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:10:07.714+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:10:07.714+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:10:07.734+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:10:07.761+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:10:07.762+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:10:07.762+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:10:07.770+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:10:07.770+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-12-31T13:10:07.785+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:10:07.830+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:10:07.836+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:10:07.853+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:10:07.859+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:10:07.861+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.242 seconds (process running for 1502.222)
+2024-12-31T13:10:07.862+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:10:16.974+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:10:16.974+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:10:16.974+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T13:10:26.688+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:10:26.714+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:12:24.633+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:12:24.634+09:00  INFO 10724 --- [final-app] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:12:24.637+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:12:24.680+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:12:24.680+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:12:24.762+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:12:24.762+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:12:24.786+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:12:24.812+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:12:24.812+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:12:24.813+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:12:24.823+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:12:24.823+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 142 ms
+2024-12-31T13:12:24.846+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:12:24.904+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:12:24.914+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:12:24.949+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:12:24.961+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:12:24.964+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.296 seconds (process running for 1639.325)
+2024-12-31T13:12:24.965+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:12:53.683+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:12:53.683+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:12:53.683+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-31T13:12:53.690+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:12:53.692+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:25.489+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:14:25.491+09:00  INFO 10724 --- [final-app] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:14:25.498+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:14:25.549+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:14:25.549+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:14:25.627+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:14:25.628+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:14:25.647+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:14:25.670+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:14:25.670+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:14:25.670+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:14:25.678+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:14:25.678+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 128 ms
+2024-12-31T13:14:25.690+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:14:25.733+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:14:25.739+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:14:25.755+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:14:25.766+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:14:25.768+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.235 seconds (process running for 1760.129)
+2024-12-31T13:14:25.769+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:14:29.009+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:14:29.009+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:14:29.010+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-31T13:14:29.058+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:29.060+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.316+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-4] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-4][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.317+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-4] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-4][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.805+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-10] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-10][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.806+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-10] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-10][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.995+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-6] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-6][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:30.996+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-6] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-6][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:31.170+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-8] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-8][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:31.171+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-8] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-8][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:31.348+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-3] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-3][index] Deprecated attribute {th:include,data-th-include} found in template index, line 11, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:14:31.349+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-3] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-3][index] Deprecated attribute {th:include,data-th-include} found in template index, line 142, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:16:28.209+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:16:28.210+09:00  INFO 10724 --- [final-app] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:16:28.215+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:16:28.261+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:16:28.261+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:16:28.338+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:16:28.338+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:16:28.358+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:16:28.382+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:16:28.382+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:16:28.382+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:16:28.390+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:16:28.390+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 128 ms
+2024-12-31T13:16:28.402+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:16:28.439+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:16:28.446+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:16:28.458+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:16:28.467+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:16:28.469+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.222 seconds (process running for 1882.83)
+2024-12-31T13:16:28.470+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:16:39.308+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:16:39.308+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:16:39.309+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-31T13:16:39.316+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 12, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:16:39.317+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 143, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:17:01.406+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:17:01.407+09:00  INFO 10724 --- [final-app] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:17:01.413+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:17:01.459+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:17:01.459+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:17:01.536+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:17:01.536+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:17:01.554+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:17:01.575+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:17:01.575+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:17:01.575+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:17:01.585+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:17:01.585+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 125 ms
+2024-12-31T13:17:01.597+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:17:01.633+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:17:01.637+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:17:01.651+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:17:01.657+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:17:01.659+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.214 seconds (process running for 1916.02)
+2024-12-31T13:17:01.661+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:17:05.251+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:17:05.251+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:17:05.252+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-31T13:17:05.260+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 13, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:17:05.261+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 144, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:19:42.937+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:19:42.938+09:00  INFO 10724 --- [final-app] [Thread-39] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:19:42.941+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:19:42.989+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:19:42.990+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:19:43.071+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:19:43.071+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:19:43.092+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:19:43.120+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:19:43.121+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:19:43.121+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:19:43.130+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:19:43.130+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 139 ms
+2024-12-31T13:19:43.146+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:19:43.186+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:19:43.191+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:19:43.205+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:19:43.214+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:19:43.216+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.242 seconds (process running for 2077.576)
+2024-12-31T13:19:43.217+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:21:22.602+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:21:22.603+09:00  INFO 10724 --- [final-app] [Thread-43] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:21:22.605+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:21:22.651+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:21:22.651+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:21:22.732+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:21:22.733+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:21:22.751+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:21:22.774+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:21:22.775+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:21:22.775+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:21:22.784+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:21:22.784+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 132 ms
+2024-12-31T13:21:22.818+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:21:22.873+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:21:22.881+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:21:22.895+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:21:22.903+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:21:22.905+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.268 seconds (process running for 2177.266)
+2024-12-31T13:21:22.905+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:22:38.597+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:22:38.598+09:00  INFO 10724 --- [final-app] [Thread-47] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:22:38.604+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:22:38.650+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:22:38.650+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:22:38.725+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:22:38.725+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:22:38.743+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:22:38.765+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:22:38.766+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:22:38.766+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:22:38.773+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:22:38.773+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 122 ms
+2024-12-31T13:22:38.786+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:22:38.834+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:22:38.839+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:22:38.855+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:22:38.867+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:22:38.869+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.231 seconds (process running for 2253.23)
+2024-12-31T13:22:38.870+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:25:47.853+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:25:47.854+09:00  INFO 10724 --- [final-app] [Thread-51] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:25:47.857+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:25:47.904+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:25:47.904+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:25:47.984+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:25:47.984+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:25:48.005+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:25:48.031+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:25:48.031+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:25:48.031+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:25:48.039+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:25:48.039+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2024-12-31T13:25:48.054+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:25:48.095+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:25:48.100+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:25:48.113+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:25:48.119+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:25:48.121+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.231 seconds (process running for 2442.482)
+2024-12-31T13:25:48.121+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:27:00.902+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:27:00.903+09:00  INFO 10724 --- [final-app] [Thread-55] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:27:00.906+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:27:00.952+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:27:00.952+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:27:01.036+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:27:01.037+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:27:01.064+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:27:01.091+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:27:01.092+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:27:01.092+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:27:01.101+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:27:01.101+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 148 ms
+2024-12-31T13:27:01.116+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:27:01.154+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:27:01.165+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:27:01.180+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:27:01.186+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:27:01.188+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.251 seconds (process running for 2515.548)
+2024-12-31T13:27:01.188+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:28:08.780+09:00  INFO 10724 --- [final-app] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 35 class path changes (0 additions, 0 deletions, 35 modifications)
+2024-12-31T13:28:08.782+09:00  INFO 10724 --- [final-app] [Thread-59] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-31T13:28:08.788+09:00  INFO 10724 --- [final-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-31T13:28:08.832+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Starting FinalAppApplication using Java 21.0.4 with PID 10724 (D:\0900_gb_oyr\spring\workspace\final-app\build\classes\java\main started by Administrator in D:\0900_gb_oyr\spring\workspace\final-app)
+2024-12-31T13:28:08.833+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-31T13:28:08.911+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2024-12-31T13:28:08.911+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.finalapp'
+2024-12-31T13:28:08.930+09:00  WARN 10724 --- [final-app] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.finalapp]' package. Please check your configuration.
+2024-12-31T13:28:08.951+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10000 (http)
+2024-12-31T13:28:08.951+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-31T13:28:08.951+09:00  INFO 10724 --- [final-app] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31T13:28:08.958+09:00  INFO 10724 --- [final-app] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-31T13:28:08.958+09:00  INFO 10724 --- [final-app] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 125 ms
+2024-12-31T13:28:08.971+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-31T13:28:09.005+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2024-12-31T13:28:09.009+09:00 DEBUG 10724 --- [final-app] [restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2024-12-31T13:28:09.023+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-31T13:28:09.032+09:00  INFO 10724 --- [final-app] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10000 (http) with context path '/'
+2024-12-31T13:28:09.034+09:00  INFO 10724 --- [final-app] [restartedMain] c.example.finalapp.FinalAppApplication   : Started FinalAppApplication in 0.215 seconds (process running for 2583.394)
+2024-12-31T13:28:09.034+09:00  INFO 10724 --- [final-app] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-31T13:29:18.162+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31T13:29:18.162+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-31T13:29:18.163+09:00  INFO 10724 --- [final-app] [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-31T13:29:18.175+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 13, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:18.182+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-1] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-1][index] Deprecated attribute {th:include,data-th-include} found in template index, line 144, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:19.975+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][board/free/list] Deprecated attribute {th:include,data-th-include} found in template board/free/list, line 14, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:19.978+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][board/free/list] Deprecated attribute {th:include,data-th-include} found in template board/free/list, line 115, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:20.714+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-4] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-4][board/qna/list] Deprecated attribute {th:include,data-th-include} found in template board/qna/list, line 14, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:20.717+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-4] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-4][board/qna/list] Deprecated attribute {th:include,data-th-include} found in template board/qna/list, line 113, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:21.423+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-9] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-9][member/login] Deprecated attribute {th:include,data-th-include} found in template member/login, line 14, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:21.425+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-9] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-9][member/login] Deprecated attribute {th:include,data-th-include} found in template member/login, line 54, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:22.040+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][member/join] Deprecated attribute {th:include,data-th-include} found in template member/join, line 14, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:22.042+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-7] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-7][member/join] Deprecated attribute {th:include,data-th-include} found in template member/join, line 109, col 26. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:22.765+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-5] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-5][index] Deprecated attribute {th:include,data-th-include} found in template index, line 13, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
+2024-12-31T13:29:22.766+09:00  WARN 10724 --- [final-app] [http-nio-10000-exec-5] o.t.s.p.StandardIncludeTagProcessor      : [THYMELEAF][http-nio-10000-exec-5][index] Deprecated attribute {th:include,data-th-include} found in template index, line 144, col 28. Please use {th:insert,data-th-insert} instead, this deprecated attribute will be removed in future versions of Thymeleaf.
