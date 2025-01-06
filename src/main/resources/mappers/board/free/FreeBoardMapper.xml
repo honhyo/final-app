@@ -10,8 +10,27 @@
     </insert>
 
     <select id="selectById" parameterType="long" resultType="FreeBoardDetailDTO">
-        SELECT FREE_BOARD_ID, MEMBER_ID, TITLE, CONTENT, VIEW_COUNT, REG_DATE, MOD_DATE
-        FROM TBL_FREE_BOARD
+        SELECT FB.FREE_BOARD_ID, FB.TITLE, FB.CONTENT, FB.VIEW_COUNT, FB.REG_DATE, FB.MOD_DATE,
+               M.MEMBER_ID, M.LOGIN_ID,
+               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FB.FREE_BOARD_ID = FL.FREE_BOARD_ID) AS LIKE_COUNT
+        FROM TBL_FREE_BOARD FB
+                 JOIN TBL_MEMBER M ON FB.MEMBER_ID = M.MEMBER_ID
         WHERE FREE_BOARD_ID = #{freeBoardId}
+    </select>
+
+    <update id="updateViewCount" parameterType="long">
+        UPDATE TBL_FREE_BOARD
+        SET VIEW_COUNT=VIEW_COUNT +1
+        WHERE FREE_BOARD_ID = #{freeBoardId}
+    </update>
+
+    <select id="selectAllFreeBoards" resultType="FreeBoardListDTO">
+        SELECT FB.FREE_BOARD_ID, FB.TITLE, FB.VIEW_COUNT, FB.REG_DATE, FB.MOD_DATE,
+               M.MEMBER_ID, M.LOGIN_ID,
+               (SELECT COUNT(*) FROM TBL_FREE_COMMENT FC WHERE FC.FREE_BOARD_ID=FB.FREE_BOARD_ID) AS COMMENT_COUNT,
+               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FL.FREE_BOARD_ID=FB.FREE_BOARD_ID  ) AS LIKE_COUNT
+        FROM TBL_FREE_BOARD FB
+                 JOIN TBL_MEMBER M ON FB.MEMBER_ID = M.MEMBER_ID
+        ORDER BY FREE_BOARD_ID DESC
     </select>
 </mapper>

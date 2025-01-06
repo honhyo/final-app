@@ -1,14 +1,20 @@
 package com.example.finalapp.mapper.board.free;
 
+import com.example.finalapp.dto.board.free.FreeBoardDetailDTO;
+import com.example.finalapp.dto.board.free.FreeBoardListDTO;
 import com.example.finalapp.dto.board.free.FreeBoardWriteDTO;
 import com.example.finalapp.dto.member.MemberJoinDTO;
 import com.example.finalapp.mapper.member.MemberMapper;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -47,6 +53,50 @@ class FreeBoardMapperTest {
     }
 
     @Test
-    void insertFreeBoard() {
+    void insert_And_select() {
+        // given
+        freeBoardMapper.insertFreeBoard(writeDTO);
+        // when
+        FreeBoardDetailDTO foundBoard = freeBoardMapper.selectById(writeDTO.getFreeBoardId())
+                .orElse(null);
+        // then
+        assertThat(foundBoard)
+                .isNotNull()
+                .extracting("title")
+                .isEqualTo("test title");
+    }
+
+    @Test
+    void selectAllFreeBoard() {
+        //given
+        freeBoardMapper.insertFreeBoard(writeDTO);
+        //when
+        List<FreeBoardListDTO> boardList = freeBoardMapper.selectAllFreeBoards();
+        //then
+        assertThat(boardList)
+                .isNotEmpty()
+                .extracting("title")
+                .contains("test title");
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

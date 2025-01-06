@@ -19,19 +19,20 @@
       <div class="container">
         <div class="detail-wrapper">
           <!-- 게시글 영역 -->
-          <article class="post-article">
+          <article class="post-article" th:object="${board}">
             <div class="post-header">
-              <h2 class="post-title">안녕하세요! 가입 인사드립니다.</h2>
+              <h2 class="post-title" th:text="*{title}">안녕하세요! 가입 인사드립니다.</h2>
               <div class="post-info">
-                <span class="writer">user123</span>
-                <span class="date">2024-01-10 14:30</span>
-                <span class="view-count">조회 42</span>
-                <span class="like-count">좋아요 5</span>
+                <span class="writer" th:text="*{loginId}">user123</span>
+                <span class="date" th:text="*{regDate}">2024-01-10 14:30</span>
+                <span class="view-count" th:text="'조회'+ *{viewCount}">조회 42</span>
+                <span class="like-count" th:text="'좋아요'+ *{likeCount}">좋아요 5</span>
               </div>
             </div>
 
             <div class="post-content">
-              <p>게시글 내용이 들어갑니다.</p>
+              <p th:utext="*{content}">게시글 내용이 들어갑니다.</p>
+              <hr>
               <div class="post-image">
                 <img src="/image/board/300x200.png" alt="게시글 이미지" />
               </div>
@@ -41,16 +42,16 @@
               <button type="button" class="like-btn">
                 <span class="like-icon">♥</span>
                 <span class="like-text">좋아요</span>
-                <span class="like-count">5</span>
+                <span class="like-count" th:text="*{likeCount}">5</span>
               </button>
             </div>
 
             <div class="btn-group">
               <div class="left-area">
-                <a href="/board/free/list" class="list-btn">목록</a>
+                <a th:href="@{/board/free/list}" class="list-btn">목록</a>
               </div>
               <div class="right-area">
-                <a href="/board/free/edit/1" class="edit-btn">수정</a>
+                <a th:href="@{/board/free/modify}" class="edit-btn">수정</a>
                 <button type="button" class="delete-btn">삭제</button>
               </div>
             </div>
