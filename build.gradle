@@ -37,6 +37,8 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // coolsms 문자 인증 추가
     implementation 'net.nurigo:sdk:4.3.2'
+    // thumbnailator
+    implementation 'net.coobird:thumbnailator:0.4.20'
 
 }
 

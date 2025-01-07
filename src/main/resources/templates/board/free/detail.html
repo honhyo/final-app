@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
     <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
     <link rel="stylesheet" th:href="@{/css/board/free/detail.css}" />
-    <script defer th:src="@{/js/board/free/detail.js}"></script>
+    <script defer type="module" th:src="@{/js/board/free/detail.js}"></script>
   </head>
   <body>
   <header class="header" th:include="~{fragments/header::header}">
@@ -20,6 +20,7 @@
         <div class="detail-wrapper">
           <!-- 게시글 영역 -->
           <article class="post-article" th:object="${board}">
+<!--            <input type="hidden" name="freeBoardId" th:value="*{freeBoardId}" />-->
             <div class="post-header">
               <h2 class="post-title" th:text="*{title}">안녕하세요! 가입 인사드립니다.</h2>
               <div class="post-info">
@@ -33,8 +34,8 @@
             <div class="post-content">
               <p th:utext="*{content}">게시글 내용이 들어갑니다.</p>
               <hr>
-              <div class="post-image">
-                <img src="/image/board/300x200.png" alt="게시글 이미지" />
+              <div class="post-image" th:if="*{freeFileId !=null}">
+                <img th:src="@{'/upload/free/'+ *{filePath}+'/'+ *{uuid}+ *{extension}}" alt="게시글 이미지" />
               </div>
             </div>
 
@@ -50,9 +51,9 @@
               <div class="left-area">
                 <a th:href="@{/board/free/list}" class="list-btn">목록</a>
               </div>
-              <div class="right-area">
-                <a th:href="@{/board/free/modify}" class="edit-btn">수정</a>
-                <button type="button" class="delete-btn">삭제</button>
+              <div class="right-area" th:if="${session.memberId == board.memberId}">
+                <a th:href="@{/board/free/modify(freeBoardId=*{freeBoardId})}" class="edit-btn">수정</a>
+                <button type="button" class="delete-btn" th:data-board-id="${board.freeBoardId}">삭제</button>
               </div>
             </div>
           </article>
@@ -91,5 +92,8 @@
   <footer class="footer" th:include="~{fragments/footer::footer}">
     <!-- footer.html 내용 -->
   </footer>
+  <script th:inline="javascript">
+    const freeBoardId = [[${board.freeBoardId}]];
+  </script>
   </body>
 </html>

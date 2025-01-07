@@ -22,6 +22,11 @@ public class FreeBoardDetailDTO {
     // 나중에 추가
 
     // 이미지 파일 정보
+   private Long freeFileId;
+   private String originalFilename;
+   private String uuid;
+   private String filePath;
+   private String extension;
 
     //날짜 타입 디테일페이지에 맞게 포매팅하기
 

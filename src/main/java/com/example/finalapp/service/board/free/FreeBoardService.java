@@ -2,6 +2,7 @@ package com.example.finalapp.service.board.free;
 
 import com.example.finalapp.dto.board.free.FreeBoardDetailDTO;
 import com.example.finalapp.dto.board.free.FreeBoardListDTO;
+import com.example.finalapp.dto.board.free.FreeBoardModifyDTO;
 import com.example.finalapp.dto.board.free.FreeBoardWriteDTO;
 import com.example.finalapp.dto.board.free.file.FreeFileDTO;
 import com.example.finalapp.exception.board.BoardNotFoundException;
@@ -9,6 +10,8 @@ import com.example.finalapp.mapper.board.free.FreeBoardMapper;
 import com.example.finalapp.mapper.board.free.file.FreeFileMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import net.coobird.thumbnailator.Thumbnailator;
+import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -103,6 +107,18 @@ public class FreeBoardService {
 
         //실제 파일 저장하기(실제 저장처리는 이 한줄이 끝)
         multipartFile.transferTo(file);
+
+        //썸네일 저장
+        String contentType = Files.probeContentType(file.toPath());
+        //이미지 파일인 경우에만 처리하는 조건식
+        if (contentType.startsWith("image")) {
+            Thumbnails.of(file)
+                    .size(300,200)
+                    .toFile(new File(savePath +"/th_"+ fileSystemName));
+
+            //썸네일은 같은 경로 상에 파일 이름만 th_를 붙여서 사용
+        }
+
         //3-2 저장한 실제 파일 정보를 DB에 삽입
         freeFileMapper.insertFile(freeFileDTO);
 
@@ -126,4 +142,74 @@ public class FreeBoardService {
 
     }
 
+
+
+
+    public void modifyFreeBoardWithFile(FreeBoardModifyDTO boardModifyDTO,
+                                        MultipartFile multipartFile) throws IOException {
+
+        freeBoardMapper.updateFreeBoard(boardModifyDTO);
+
+
+
+        if(multipartFile == null || multipartFile.isEmpty()) {return;}
+
+        //파일이 존재하면 삭제 후 다시 저장 처리
+        //DB에서 삭제
+        freeFileMapper.deleteByBoardId(boardModifyDTO.getFreeBoardId());
+
+        //새 파일로 저장
+        String originalFilename = multipartFile.getOriginalFilename();
+        String extention = originalFilename.substring(originalFilename.lastIndexOf("."));
+        String uuid = UUID.randomUUID().toString();
+
+        String datePath = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        String savePath = this.uploadPath +"/"+ datePath;
+
+
+        FreeFileDTO freeFileDTO = new FreeFileDTO();
+        freeFileDTO.setUuid(uuid);
+        freeFileDTO.setOriginalFilename(originalFilename);
+        freeFileDTO.setFilePath(datePath);
+        freeFileDTO.setExtension(extention);
+        freeFileDTO.setFreeBoardId(boardModifyDTO.getFreeBoardId());
+
+        log.debug("freeFileDTO : " + freeFileDTO);
+
+
+        File uploadDir = new File(savePath);
+
+
+        if(!uploadDir.exists()) {
+
+            uploadDir.mkdirs();
+        }
+
+        String fileSystemName = uuid+extention;
+        String fileFullPath= savePath +"/"+ fileSystemName;
+        File file = new File(fileFullPath);
+
+
+        multipartFile.transferTo(file);
+
+
+        String contentType = Files.probeContentType(file.toPath());
+        if (contentType.startsWith("image")) {
+            Thumbnails.of(file)
+                    .size(300,200)
+                    .toFile(new File(savePath +"/th_"+ fileSystemName));
+
+
+        }
+
+        freeFileMapper.insertFile(freeFileDTO);
+
+
+
+
+    }
+
+    public void removeFreeBoard(Long boardId){
+        freeBoardMapper.deleteFreeBoard(boardId);
+    }
 }

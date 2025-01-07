@@ -12,10 +12,12 @@
     <select id="selectById" parameterType="long" resultType="FreeBoardDetailDTO">
         SELECT FB.FREE_BOARD_ID, FB.TITLE, FB.CONTENT, FB.VIEW_COUNT, FB.REG_DATE, FB.MOD_DATE,
                M.MEMBER_ID, M.LOGIN_ID,
-               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FB.FREE_BOARD_ID = FL.FREE_BOARD_ID) AS LIKE_COUNT
+               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FB.FREE_BOARD_ID = FL.FREE_BOARD_ID) AS LIKE_COUNT,
+               FF.FREE_FILE_ID,FF.ORIGINAL_FILENAME,FF.UUID,FF.FILE_PATH,FF.EXTENSION
         FROM TBL_FREE_BOARD FB
                  JOIN TBL_MEMBER M ON FB.MEMBER_ID = M.MEMBER_ID
-        WHERE FREE_BOARD_ID = #{freeBoardId}
+               LEFT JOIN TBL_FREE_FILE FF ON FB.FREE_BOARD_ID = FF.FREE_BOARD_ID
+        WHERE FB.FREE_BOARD_ID = #{freeBoardId}
     </select>
 
     <update id="updateViewCount" parameterType="long">
@@ -28,9 +30,25 @@
         SELECT FB.FREE_BOARD_ID, FB.TITLE, FB.VIEW_COUNT, FB.REG_DATE, FB.MOD_DATE,
                M.MEMBER_ID, M.LOGIN_ID,
                (SELECT COUNT(*) FROM TBL_FREE_COMMENT FC WHERE FC.FREE_BOARD_ID=FB.FREE_BOARD_ID) AS COMMENT_COUNT,
-               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FL.FREE_BOARD_ID=FB.FREE_BOARD_ID  ) AS LIKE_COUNT
+               (SELECT COUNT(*) FROM TBL_FREE_LIKE FL WHERE FL.FREE_BOARD_ID=FB.FREE_BOARD_ID  ) AS LIKE_COUNT,
+               FF.FREE_FILE_ID, FF.ORIGINAL_FILENAME, FF.UUID, FF.FILE_PATH, FF.EXTENSION
         FROM TBL_FREE_BOARD FB
                  JOIN TBL_MEMBER M ON FB.MEMBER_ID = M.MEMBER_ID
+                 LEFT JOIN TBL_FREE_FILE FF ON FB.FREE_BOARD_ID = FF.FREE_BOARD_ID
+
         ORDER BY FREE_BOARD_ID DESC
     </select>
+
+    <update id="updateFreeBoard" parameterType="FreeBoardModifyDTO">
+        UPDATE TBL_FREE_BOARD
+        SET TITLE=#{title},CONTENT=#{content}
+        WHERE FREE_BOARD_ID=#{freeBoardId}
+    </update>
+
+    <delete id="deleteFreeBoard" parameterType="long">
+        DELETE FROM TBL_FREE_BOARD
+        WHERE FREE_BOARD_ID = #{freeBoardId}
+    </delete>
+
+
 </mapper>

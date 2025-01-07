@@ -8,6 +8,10 @@
   <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
   <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
   <link rel="stylesheet" th:href="@{/css/board/free/list.css}" />
+
+
+
+
   <script defer th:src="@{/js/board/free/list.js}"></script>
 </head>
 <body>
@@ -46,7 +50,8 @@
         <div class="board-item" th:each="board : ${boardList}" th:object="${board}">
           <div class="thumbnail">
             <!-- 이미지 나중에 처리 -->
-            <img src="/image/board/300x200.png" alt="게시글 썸네일" />
+            <img th:src="@{/image/board/300x200.png}" alt="게시글 썸네일" th:if="*{freeFileId ==null}"/>
+            <img th:src="@{'/upload/free/' + *{filePath} + '/th_'+ *{uuid} + *{extension} }" alt="게시글 썸네일" th:unless="*{freeFileId ==null}"/>
           </div>
           <div class="content">
             <h3 class="title">

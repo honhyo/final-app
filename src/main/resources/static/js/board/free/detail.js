@@ -1,3 +1,6 @@
+import * as likeApi from './modules/likeApi.js'
+
+
 {
   // DOM 요소
   const $likeBtn = document.querySelector('.like-btn');
@@ -5,6 +8,14 @@
   const $commentForm = document.querySelector('.comment-form');
   const $commentInput = document.querySelector('.comment-input');
   const $commentList = document.querySelector('.comment-list');
+
+  { //진입과 동시에 좋아요 체크
+    likeApi.checkLike(freeBoardId, function (data) {
+      console.log(data);
+  //TODO:전달받은 데이터를 활용하여 좋아요 버튼의 상태와 좋아요 수 반영하기!
+    });
+
+  }
 
   // 좋아요 버튼 클릭
   $likeBtn.addEventListener('click', function () {
@@ -21,10 +32,16 @@
   });
 
   // 게시글 삭제
-  $deleteBtn.addEventListener('click', function () {
+  //JS,타임리프는 .?을 제공한다
+  //.?:옵셔녈 체이닝 연산자
+  //특정 객체에 접근할떄 null,undefined 인지 확인해야함
+  //자바의 경우 옵서녀ㅑㄹ 객체를 사용한다
+  //js의 경우 옵셔널 체이닝 연산자를 활용하여, 해당 개ㅑㄱ체가 null이 아닌 경우에만 접근하도록 자동처리
+  $deleteBtn?.addEventListener('click', function () {
     if (confirm('정말 삭제하시겠습니까?')) {
       // TODO: 서버에 삭제 요청
-      location.href = '/free-board/list';
+      const boardId=this.dataset.boardId;
+      location.href = `/board/free/delete?freeBoardId=${boardId}`;
     }
   });
 

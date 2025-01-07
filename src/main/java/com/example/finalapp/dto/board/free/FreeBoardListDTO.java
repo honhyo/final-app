@@ -19,6 +19,11 @@ public class FreeBoardListDTO {
    private int commentCount;
 
     //파일관련 필드는 나중에 처리
+   private Long freeFileId;
+   private String freeFilename;
+   private String uuid;
+   private String filePath;
+   private String extension;
 
 
 }

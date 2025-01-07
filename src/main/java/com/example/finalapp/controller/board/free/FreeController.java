@@ -3,6 +3,7 @@ package com.example.finalapp.controller.board.free;
 
 import com.example.finalapp.dto.board.free.FreeBoardDetailDTO;
 import com.example.finalapp.dto.board.free.FreeBoardListDTO;
+import com.example.finalapp.dto.board.free.FreeBoardModifyDTO;
 import com.example.finalapp.dto.board.free.FreeBoardWriteDTO;
 import com.example.finalapp.service.board.free.FreeBoardService;
 import lombok.RequiredArgsConstructor;
@@ -70,7 +71,32 @@ public class FreeController {
     }
 
     @GetMapping("/modify")
-    public String modify() {
+    public String modify(Long freeBoardId, Model model) {
+        FreeBoardDetailDTO foundBoard = freeBoardService.getFreeBoardById(freeBoardId);
+        model.addAttribute("board", foundBoard);
         return "board/free/modify";
+
     }
+
+    @PostMapping("/modify")
+    public String modify(FreeBoardModifyDTO boardModifyDTO,
+    @RequestParam(value="image",required=false) MultipartFile imgFile,
+                         RedirectAttributes redirectAttributes) {
+        try {
+            freeBoardService.modifyFreeBoardWithFile(boardModifyDTO,imgFile);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+                redirectAttributes.addAttribute("freeBoardId", boardModifyDTO.getFreeBoardId());
+                return "redirect:/board/free/detail";
+
+    }
+
+
+    @GetMapping("/delete")
+    public String delete(Long freeBoardId) {
+        freeBoardService.removeFreeBoard(freeBoardId);
+        return "redirect:/board/free/list";
+    }
+
 }
